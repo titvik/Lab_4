@@ -1,0 +1,33 @@
+﻿@model lab4.Models.User
+@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<h1>Sign Up</h1>
+
+<form method="post" action="SignUp2">
+
+    <label><b>Email</b></label>
+    <div class="form-group w-25">
+        <input class="form-control" type="text" asp-for="Email"/>
+        <span style="color: red;" asp-validation-for="Email"></span>
+    </div>
+
+    <label><b>Password</b></label>
+    <div class="form-group w-25">
+        <input class="form-control" type="password" asp-for="Password"/>
+    </div>
+
+    <label><b>Confirm password</b></label>
+    <div class="form-group w-25">
+        <input class="form-control" type="password" name="ConfirmPass" />
+        <span style="color: red;" asp-validation-for="Password"></span>
+    </div>
+
+    <div class="checkbox">
+        <label><input type="checkbox" value=""> Remember?</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Complete sign up</button>
+</form>
+
